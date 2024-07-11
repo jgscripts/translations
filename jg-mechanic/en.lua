@@ -346,5 +346,6 @@ Locales["en"] = {
   itemNotInInventory = "You don't own %dx %s",
   notInDriversSeat = "You are not in the vehicle driver's seat",
   passengersMustLeaveVehicleFirst = "Passengers must leave the vehicle first",
-  cannotStanceVehicleType = "You can only stance cars"
+  cannotStanceVehicleType = "You can only stance cars",
+  tuningNotAvailable = "Not available for this vehicle",
 }
