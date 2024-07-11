@@ -1,6 +1,6 @@
 Locales = Locales or {}
 
-Locales['en'] = {
+Locales['sv'] = {
   -- UI
   vehicle = "Fordon",
   vehicles = "Fordon",
