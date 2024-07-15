@@ -58,7 +58,7 @@ Locales['sv'] = {
   newPlate = "Nytt registreringsnummer",
   search = "Sök med namn eller registreringsskylt",
   noPrivateGarages = "Inga privata garage",
-  editPrivateGarage = "Edit Privat garage",
+  editPrivateGarage = "Ändra privat garage",
   owners = "Ägare(n)",
   location = "Plats",
   next = "Nästa",
@@ -81,13 +81,13 @@ Locales['sv'] = {
   vehicleSetup = "Inställning av fordon",
   extras = "Extramaterial",
   extra = "Extra",
-  liveries = "Leverier",
-  livery = "livré",
+  liveries = "Liveries",
+  livery = "livery",
   noLiveries = "Inga liveries tillgängliga",
   noExtras = "Inga extrafunktioner tillgängliga",
   none = "Ingen",
-  vehicleNeedsService = "Needs Service",
-  type = "Type",
+  vehicleNeedsService = "Dags för service",
+  type = "Typ",
 
   -- Notifications
   insertVehicleTypeError = "Du kan endast förvara %{value} fordonstyp i detta garage",
@@ -137,7 +137,7 @@ Locales['sv'] = {
   cmdCreatePrivGarage = "Gör ett privatgarage till en spelare",
 
   -- v3
-  vehicleStoreError = "You cannot store this vehicle here",
-  mins = "mins",
-  noVehiclesAvailableToDrive = "There are no vehicles available to drive",
+  vehicleStoreError = "Du kan inte ställa in detta fordonet här",
+  mins = "minuter",
+  noVehiclesAvailableToDrive = "Det finns inga fordon i detta garaget",
 }

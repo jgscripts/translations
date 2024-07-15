@@ -59,8 +59,7 @@ Locales["en"] = {
   lockscreenWallpaper = "Lockscreen Wallpaper URL",
   viewServiceHistory = "View Service History",
   serviceHistory = "Service History",
-  noServicingData =
-    "This vehicle has no servicing data. Servicing data will be available once the vehicle has been driven over 1km.",
+  noServicingData = "This vehicle has no servicing data. Servicing data will be available once the vehicle has been driven over 1km.",
   noServiceHistory = "This vehicle does not have any service history",
   service = "Service",
   installNitrous = "Install Nitrous",
