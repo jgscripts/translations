@@ -173,6 +173,7 @@ Locales['it'] = {
   dealershipOrderCancelled = "Ordine annullato con successo",
   errorVehicleWithSpawnCodeExists = "Esiste già un veicolo con questo codice spawn",
   errorExitVehicle = "Devi prima uscire dal veicolo",
+  errorPlacementCollision = "Non puoi piazzare il veicolo qui",
 
   -- NEW v1.1
   purchaseRequest = "Richiesta Acquisto",
