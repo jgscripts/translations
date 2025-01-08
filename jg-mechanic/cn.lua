@@ -348,4 +348,5 @@ Locales["cn"] = {
   passengersMustLeaveVehicleFirst = "乘客必须先离开车辆",
   cannotStanceVehicleType = "您只能调整轿车的姿态",
   tuningNotAvailable = "此车辆不可调校",
+  leaveVehicleFirst = "Please leave the vehicle first",
 }

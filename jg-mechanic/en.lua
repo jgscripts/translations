@@ -347,4 +347,5 @@ Locales["en"] = {
   passengersMustLeaveVehicleFirst = "Passengers must leave the vehicle first",
   cannotStanceVehicleType = "You can only stance cars",
   tuningNotAvailable = "Not available for this vehicle",
+  leaveVehicleFirst = "Please leave the vehicle first",
 }

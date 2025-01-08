@@ -347,4 +347,5 @@ Locales["sv"] = {
     passengersMustLeaveVehicleFirst = "Passagerare måste lämna fordonet först",
     cannotStanceVehicleType = "Du kan bara använda stans kittet på fordon med fjädringsjustering",
     tuningNotAvailable = "Inte tillgängligt för detta fordon",
+    leaveVehicleFirst = "Please leave the vehicle first",
 }

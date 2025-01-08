@@ -346,4 +346,5 @@ Locales["hu"] = {
   passengersMustLeaveVehicleFirst = "A jármű utasai először ki kell menjenek",
   cannotStanceVehicleType = "Csak autókra lehet kerék állítást végezni",
   tuningNotAvailable = "Nem elérhető ezen a járműnél",
+  leaveVehicleFirst = "Please leave the vehicle first",
 }
