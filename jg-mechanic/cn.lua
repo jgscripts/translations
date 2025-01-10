@@ -349,4 +349,9 @@ Locales["cn"] = {
   cannotStanceVehicleType = "您只能调整轿车的姿态",
   tuningNotAvailable = "此车辆不可调校",
   leaveVehicleFirst = "Please leave the vehicle first",
+
+  -- Shops
+  shopNameError = "Invalid shop name",
+  failedGiveItem = "Failed to give item to player",
+  purchaseSuccess = "Successfully bought %dx %s",
 }

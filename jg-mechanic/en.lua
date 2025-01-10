@@ -348,4 +348,9 @@ Locales["en"] = {
   cannotStanceVehicleType = "You can only stance cars",
   tuningNotAvailable = "Not available for this vehicle",
   leaveVehicleFirst = "Please leave the vehicle first",
+
+  -- Shops
+  shopNameError = "Invalid shop name",
+  failedGiveItem = "Failed to give item to player",
+  purchaseSuccess = "Successfully bought %dx %s",
 }

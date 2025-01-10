@@ -349,4 +349,9 @@ Locales["de"] = {
   cannotStanceVehicleType = "Sie können nur Autos stancen",
   tuningNotAvailable = "Nicht verfügbar für dieses Fahrzeug",
   leaveVehicleFirst = "Please leave the vehicle first",
+
+  -- Shops
+  shopNameError = "Invalid shop name",
+  failedGiveItem = "Failed to give item to player",
+  purchaseSuccess = "Successfully bought %dx %s",
 }
