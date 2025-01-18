@@ -14,7 +14,7 @@ Locales["en"] = {
   copyToClipboard = "Copy to Clipboard",
   searchHandling = "Search handling properties",
   viewChanges = "View Changes",
-  storeInDatabase = "Store handling in database",
+  storeInDatabase = "Store handling in database with vehicle plate",
   applyHandling = "Apply Handling",
   clearChanges = "Clear Changes",
   preview = "Preview",
@@ -57,7 +57,7 @@ Locales["en"] = {
   noPresetSelected = "No Preset Selected",
 
   -- Long Messages
-  applyHandlingWriteToDb = "Do you want to write this handling profile to the database, so it reapplies after being respawned or after being pulled out a garage?",  
+  applyHandlingWriteToDb = "Do you want to save this handling profile in the database with the vehicle’s plate, so it’s automatically reapplied whenever the vehicle is spawned? Otherwise, the handling will be lost when the vehicle despawns.",  
   applyHandlingIfJGMechanic = "If you are running JG Mechanic, these edits are an overwrite and servicing damage won't be applied until the vehicle is reset.",
   noHandlingChanges = "There are no changes to the handling!",
   confirmationDeleteProfile = "Are you sure you want to delete this profile?",
