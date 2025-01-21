@@ -14,7 +14,6 @@ Locales["en"] = {
   copyToClipboard = "Copy to Clipboard",
   searchHandling = "Search handling properties",
   viewChanges = "View Changes",
-  storeInDatabase = "Store handling in database",
   applyHandling = "Apply Handling",
   clearChanges = "Clear Changes",
   preview = "Preview",
@@ -55,13 +54,16 @@ Locales["en"] = {
   useBaseHandling = "Use Base Handling",
   timingToolReset = "RESET",
   noPresetSelected = "No Preset Selected",
+  applyTemporarily = "Apply temporarily (until vehicle despawns)",
+  applyToPlate = "Apply to this vehicle plate always (store in DB)",
+  applyToModel = "Apply to all vehicles of this model always (store in DB)",
+  handlingApplyType = "How would you like this handling to be applied?",
 
   -- Long Messages
-  applyHandlingWriteToDb = "Do you want to write this handling profile to the database, so it reapplies after being respawned or after being pulled out a garage?",  
   applyHandlingIfJGMechanic = "If you are running JG Mechanic, these edits are an overwrite and servicing damage won't be applied until the vehicle is reset.",
   noHandlingChanges = "There are no changes to the handling!",
   confirmationDeleteProfile = "Are you sure you want to delete this profile?",
-  resetHandlingToStockMsg = "This vehicle has had it's handling edited by this tool. You can reset the vehicle back to stock (the handling profile it had before it was modified by this editor) by clicking the button below. Consider saving this handling profile first, as this cannot be un-done.",
+  resetHandlingToStockMsg = "This vehicle has had it's handling edited by this tool. You can reset the vehicle back to stock (the handling profile it had before it was modified by this editor) by clicking the button below. If the handling was persisted to the database, the data will be deleted; and if apply to all vehicles with this model was selected, this will reset all those vehicles.",
   bodyRollLeft = "Move left if vehicle rolls in the direction of travel or if vehicle is too stiff/has no body roll",
   bodyRollRight = "Move right if vehicle flips over when turning or if vehicle has a lot of body roll/not stiff enough",
   handlingNotApplied = "The handling changes you've made haven't been applied to the vehicle.",
@@ -71,6 +73,7 @@ Locales["en"] = {
   currentHandlingExplain = "Play with the vehicle's current handling, including any tuning & servicing modifications.",
   ignoreServicingExplain = "Get vehicle's current handling, but without any servicing damage (if applicable).",
   useBaseHandlingExplain = "Use vehicle's base handling, disregarding any modifications made by JG Mechanic.",
+  applyToModelWarning = "This is not recommended; as it can add a lot of additional load to your server. Instead, export & update the vehicle's handling.meta file.",
 
   -- Tuning Categories
   allCategories = "All Categories",
