@@ -351,7 +351,14 @@ Locales["es"] = {
   leaveVehicleFirst = "Please leave the vehicle first",
 
   -- Shops
-  shopNameError = "Invalid shop name",
-  failedGiveItem = "Failed to give item to player",
-  purchaseSuccess = "Successfully bought %dx %s",
+  shopNameError = "Nombre de tienda no válido",
+  failedGiveItem = "No se pudo dar elemento al jugador",
+  purchaseSuccess = "Comprado exitosamente %dx %s",
+  cannotCarry = "No puedes llevar este artículo.",
+  Access = "Presione [E] para acceder ",
+  ShopTargetLabel = "Acceso Mercado",
+  StashTargetLabel = "Acceso Alijo",
+  enter_purchase_amount = "Ingrese la cantidad que desea comprar",
+  invalid_amount = "Monto no válido ingresado: ",
+  BuyItem = "Por para",
 }
