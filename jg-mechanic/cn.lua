@@ -173,6 +173,9 @@ Locales["cn"] = {
   contactMechanicToFulfill = "联系您的技师安排订单的完成。",
   noPayment = "无付款",
   deleteOrderConfirmation = "删除此订单将全额退款给客户，即使订单部分完成。您确定要删除吗？",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- 改装
   repair = "维修",

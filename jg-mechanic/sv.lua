@@ -172,6 +172,9 @@ Locales["sv"] = {
   contactMechanicToFulfill = "Kontakta din mekaniker för att arrangera utförandet av din beställning.",
   noPayment = "Ingen Betalning",
   deleteOrderConfirmation = "Tar du bort denna order kommer kunden att få full återbetalning, även om ordern är delvis uppfylld. Är du säker på att du vill radera den?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Reparation",

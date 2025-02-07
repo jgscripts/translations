@@ -173,6 +173,9 @@ Locales["es"] = {
   contactMechanicToFulfill = "Contacta con un mecánico para coordinar la instalación del pedido",
   noPayment = "Sin pago",
   deleteOrderConfirmation = "Si eliminas este pedido, se reembolsará el importe total al cliente, incluso si el pedido se completa parcialmente. ¿Estás seguro de que deseas eliminarlo?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Reparar",

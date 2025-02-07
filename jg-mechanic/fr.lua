@@ -172,6 +172,9 @@ Locales["fr"] = {
   contactMechanicToFulfill = "Contactez le garage pour organiser l'installation de votre commande.",
   noPayment = "Aucun paiement",
   deleteOrderConfirmation = "La suppression de cette commande permet le remboursement intégral du client, même si la commande est partiellement exécutée. Êtes-vous sûr de vouloir la supprimer ?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Réparer",

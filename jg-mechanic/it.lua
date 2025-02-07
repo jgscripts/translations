@@ -172,6 +172,9 @@ Locales["it"] = {
   contactMechanicToFulfill = "Contatta il tuo meccanico per organizzare l'evasione del tuo ordine.",
   noPayment = "Nessun Pagamento",
   deleteOrderConfirmation = "L'eliminazione di questo ordine rimborserà l'intero importo al cliente, anche se l'ordine è stato evaso solo in parte. Sei sicuro di volerlo eliminare?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Ripara",

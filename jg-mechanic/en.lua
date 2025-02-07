@@ -172,6 +172,9 @@ Locales["en"] = {
   contactMechanicToFulfill = "Contact your mechanic to arrange fulfilment of your order.",
   noPayment = "No Payment",
   deleteOrderConfirmation = "Deleting this order will refund the customer in full, even if the order is partially fulfilled. Are you sure you want to delete it?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Repair",

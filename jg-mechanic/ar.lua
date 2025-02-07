@@ -172,6 +172,9 @@ Locales["ar"] = {
   contactMechanicToFulfill = "اتصل بميكانيكيك لترتيب تنفيذ طلبك.",
   noPayment = "لا يوجد دفع",
   deleteOrderConfirmation = "سيؤدي حذف هذا الطلب إلى استرداد المبلغ بالكامل للعميل، حتى إذا تم تنفيذ الطلب جزئيًا. هل أنت متأكد أنك تريد حذفه؟",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "إصلاح",

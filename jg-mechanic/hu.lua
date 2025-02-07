@@ -171,6 +171,9 @@ Locales["hu"] = {
   contactMechanicToFulfill = "Kapcsolódj a szervizhez a megrendelés teljesítéséhez.",
   noPayment = "Nincs fizetés",
   deleteOrderConfirmation = "A megrendelés törlése teljesen visszaállítja a fizetést a vevőnek, még akkor is, ha a megrendelés részben teljesítve van. Biztosan törlöd?",
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
 
   -- Mods
   repair = "Javítás",

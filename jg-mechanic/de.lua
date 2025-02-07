@@ -172,7 +172,10 @@ Locales["de"] = {
   contactMechanicToFulfill = "Kontaktieren Sie Ihren Mechaniker, um die Erfüllung Ihrer Bestellung zu arrangieren.",
   noPayment = "Keine Zahlung",
   deleteOrderConfirmation = "Das Löschen dieses Auftrags erstattet dem Kunden den vollen Betrag zurück, auch wenn der Auftrag teilweise erfüllt wurde. Sind Sie sicher, dass Sie ihn löschen möchten?",
-
+  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
+  upshift = "Upshift",
+  downshift = "Downshift",
+  
   -- Mods
   repair = "Reparieren",
   repairVehicle = "Fahrzeug reparieren",
