@@ -239,6 +239,7 @@ Locales["sv"] = {
   drivetrains = "Drivlina",
   brakes = "Bromsar",
   driftTuning = "Driftjustering",
+  gearboxes = "Gearboxes",
 
   -- Service
   engineOil = "Motorolja",
@@ -289,6 +290,7 @@ Locales["sv"] = {
   tyre_smoke_kit = "Däckrökssats",
   bulletproof_tyres = "Kulskyddade Däck",
   extras_kit = "Extradelar Sats",
+  manual_gearbox = "Manual Gearbox",
 
   -- Fel & Meddelanden
   playerIsBusy = "Spelaren är upptagen för tillfället",

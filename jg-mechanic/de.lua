@@ -239,6 +239,7 @@ Locales["de"] = {
   drivetrains = "Antriebe",
   brakes = "Bremsen",
   driftTuning = "Drift-Tuning",
+  gearboxes = "Gearboxes",
 
   -- Servicing
   engineOil = "Motoröl",
@@ -290,6 +291,7 @@ Locales["de"] = {
   tyre_smoke_kit = "Reifenqualm-Kit",
   bulletproof_tyres = "Kugelsichere Reifen",
   extras_kit = "Extras-Kit",
+  manual_gearbox = "Manual Gearbox",
 
   -- Fehler & Nachrichten
   playerIsBusy = "Der Spieler ist derzeit beschäftigt",

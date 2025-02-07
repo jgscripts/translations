@@ -239,6 +239,7 @@ Locales["ar"] = {
   drivetrains = "أنظمة الدفع",
   brakes = "فرامل",
   driftTuning = "تعديل الانجراف",
+  gearboxes = "Gearboxes",
 
   -- Servicing
   engineOil = "زيت المحرك",
@@ -289,6 +290,7 @@ Locales["ar"] = {
   tyre_smoke_kit = "مجموعة دخان الإطارات",
   bulletproof_tyres = "إطارات مضادة للرصاص",
   extras_kit = "مجموعة إضافات",
+  manual_gearbox = "Manual Gearbox",
 
   -- Errors & Messages
   playerIsBusy = "اللاعب مشغول حاليًا",

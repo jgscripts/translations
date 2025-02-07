@@ -238,6 +238,7 @@ Locales["hu"] = {
   drivetrains = "Hajtás",
   brakes = "Fékek",
   driftTuning = "Drift tuning",
+  gearboxes = "Gearboxes",
 
   -- Servicing
   engineOil = "Motorolaj",
@@ -288,6 +289,7 @@ Locales["hu"] = {
   tyre_smoke_kit = "Gumiabroncs füst készülék",
   bulletproof_tyres = "Biztonságos gumiabroncsok",
   extras_kit = "Extra rész",
+  manual_gearbox = "Manual Gearbox",
 
   -- Errors & Messages
   playerIsBusy = "Játékos jelenleg foglalt",

@@ -239,6 +239,7 @@ Locales["it"] = {
   drivetrains = "Trasmissioni",
   brakes = "Freni",
   driftTuning = "Tuning Drift",
+  gearboxes = "Gearboxes",
 
   -- Servicing
   engineOil = "Olio Motore",
@@ -289,6 +290,7 @@ Locales["it"] = {
   tyre_smoke_kit = "Kit Fumo Pneumatici",
   bulletproof_tyres = "Pneumatici Bulletproof",
   extras_kit = "Kit Extra",
+  manual_gearbox = "Manual Gearbox",
 
   -- Errors & Messages
   playerIsBusy = "Il player è attualmente occupato",

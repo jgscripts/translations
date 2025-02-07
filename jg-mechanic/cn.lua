@@ -240,6 +240,7 @@ Locales["cn"] = {
   drivetrains = "传动系统",
   brakes = "刹车",
   driftTuning = "漂移调校",
+  gearboxes = "Gearboxes",
 
   -- 维修
   engineOil = "机油",
@@ -290,6 +291,7 @@ Locales["cn"] = {
   tyre_smoke_kit = "轮胎烟雾套件",
   bulletproof_tyres = "防弹轮胎",
   extras_kit = "附加套件",
+  manual_gearbox = "Manual Gearbox",
 
   -- 错误与消息
   playerIsBusy = "玩家目前正忙",

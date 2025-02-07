@@ -240,6 +240,7 @@ Locales["es"] = {
   drivetrains = "Trenes de transmisión",
   brakes = "Frenos",
   driftTuning = "Mod de Drift",
+  gearboxes = "Gearboxes",
 
   -- Servicing
   engineOil = "Aceite de motor",
@@ -290,6 +291,7 @@ Locales["es"] = {
   tyre_smoke_kit = "Kit de humo para neumáticos",
   bulletproof_tyres = "Neumáticos a prueba de balas",
   extras_kit = "Kit de extras",
+  manual_gearbox = "Manual Gearbox",
 
   -- Errors & Messages
   playerIsBusy = "El jugador está ocupado",
