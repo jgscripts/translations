@@ -172,15 +172,15 @@ Locales["de"] = {
   contactMechanicToFulfill = "Kontaktieren Sie Ihren Mechaniker, um die Erfüllung Ihrer Bestellung zu arrangieren.",
   noPayment = "Keine Zahlung",
   deleteOrderConfirmation = "Das Löschen dieses Auftrags erstattet dem Kunden den vollen Betrag zurück, auch wenn der Auftrag teilweise erfüllt wurde. Sind Sie sicher, dass Sie ihn löschen möchten?",
-  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
-  upshift = "Upshift",
-  downshift = "Downshift",
+  highRpmWarning = "Längeres Verweilen bei hohen Drehzahlen beschädigt deinen Motor!",
+  upshift = "Hochschalten",
+  downshift = "Herunterschalten",
   
   -- Mods
   repair = "Reparieren",
   repairVehicle = "Fahrzeug reparieren",
   selfServiceRepairVehicle = "Selbstbedienungsreparatur",
-  vehicleFullHealth = "Fahrzeug volle Gesundheit",
+  vehicleFullHealth = "Fahrzeug in einwandfreiem Zustand",
   performance = "Leistung",
   cosmetics = "Kosmetik",
   stance = "Haltung",
@@ -242,7 +242,7 @@ Locales["de"] = {
   drivetrains = "Antriebe",
   brakes = "Bremsen",
   driftTuning = "Drift-Tuning",
-  gearboxes = "Gearboxes",
+  gearboxes = "Getriebe",
 
   -- Servicing
   engineOil = "Motoröl",
@@ -294,7 +294,7 @@ Locales["de"] = {
   tyre_smoke_kit = "Reifenqualm-Kit",
   bulletproof_tyres = "Kugelsichere Reifen",
   extras_kit = "Extras-Kit",
-  manual_gearbox = "Manual Gearbox",
+  manual_gearbox = "Manuelles Getriebe",
 
   -- Fehler & Nachrichten
   playerIsBusy = "Der Spieler ist derzeit beschäftigt",
@@ -353,10 +353,10 @@ Locales["de"] = {
   passengersMustLeaveVehicleFirst = "Die Passagiere müssen das Fahrzeug zuerst verlassen",
   cannotStanceVehicleType = "Sie können nur Autos stancen",
   tuningNotAvailable = "Nicht verfügbar für dieses Fahrzeug",
-  leaveVehicleFirst = "Please leave the vehicle first",
+  leaveVehicleFirst = "Bitte verlasse zuerst das Fahrzeug",
 
   -- Shops
-  shopNameError = "Invalid shop name",
-  failedGiveItem = "Failed to give item to player",
-  purchaseSuccess = "Successfully bought %dx %s",
+  shopNameError = "Ungültiger Shop-Name",
+  failedGiveItem = "Fehler beim Übergeben des Gegenstands an den Spieler",
+  purchaseSuccess = "Erfolgreich %dx %s gekauft",
 }
