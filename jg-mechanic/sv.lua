@@ -172,9 +172,9 @@ Locales["sv"] = {
   contactMechanicToFulfill = "Kontakta din mekaniker för att arrangera utförandet av din beställning.",
   noPayment = "Ingen Betalning",
   deleteOrderConfirmation = "Tar du bort denna order kommer kunden att få full återbetalning, även om ordern är delvis uppfylld. Är du säker på att du vill radera den?",
-  highRpmWarning = "Staying at high RPMs for an extended time damages your engine!",
-  upshift = "Upshift",
-  downshift = "Downshift",
+  highRpmWarning = "Att stanna på högt varvtal under längre period kan skada din motor!",
+  upshift = "Växla upp",
+  downshift = "Växla ned",
 
   -- Mods
   repair = "Reparation",
@@ -242,7 +242,7 @@ Locales["sv"] = {
   drivetrains = "Drivlina",
   brakes = "Bromsar",
   driftTuning = "Driftjustering",
-  gearboxes = "Gearboxes",
+  gearboxes = "Växellådor",
 
   -- Service
   engineOil = "Motorolja",
@@ -293,7 +293,7 @@ Locales["sv"] = {
   tyre_smoke_kit = "Däckrökssats",
   bulletproof_tyres = "Kulskyddade Däck",
   extras_kit = "Extradelar Sats",
-  manual_gearbox = "Manual Gearbox",
+  manual_gearbox = "Manuell Växellåda",
 
   -- Fel & Meddelanden
   playerIsBusy = "Spelaren är upptagen för tillfället",
@@ -352,10 +352,10 @@ Locales["sv"] = {
   passengersMustLeaveVehicleFirst = "Passagerare måste lämna fordonet först",
   cannotStanceVehicleType = "Du kan bara använda stans kittet på fordon med fjädringsjustering",
   tuningNotAvailable = "Inte tillgängligt för detta fordon",
-  leaveVehicleFirst = "Please leave the vehicle first",
+  leaveVehicleFirst = "Kliv ut ur fordonet först",
 
   -- Shops
-  shopNameError = "Invalid shop name",
-  failedGiveItem = "Failed to give item to player",
-  purchaseSuccess = "Successfully bought %dx %s",
+  shopNameError = "Ogiltigt affärs namn",
+  failedGiveItem = "Misslyckades med att ge item",
+  purchaseSuccess = "Köpte %dx %s",
 }
