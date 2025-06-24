@@ -227,5 +227,8 @@ Locales["en"] = {
   HEAD = "HEAD",
   colours = "Colours",
   statusColours = "Status Colours",
-  playerVoice = "Player Voice & Radio"
+  playerVoice = "Player Voice & Radio",
+  dirtyMoneyBalance = "Dirty Money",
+  showMinimapOnFoot = "Show minimap on foot",
+  showCompassOnFoot = "Show compass on foot",
 }
