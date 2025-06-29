@@ -22,7 +22,7 @@ Locales['zh-tw'] = {
   hours = "小時",
   mins = "分鐘",
 
-  -- 用户界面
+  -- 用戶介面
   noVehicles = "此車庫沒有車輛",
   noVehiclesAvailableToDrive = "沒有可供駕駛的車輛",
   vehicles = "輛車",
@@ -125,18 +125,18 @@ Locales['zh-tw'] = {
   playerIsDead = "你死了無法執行此操作",
   vehicleStoreError = "你沒有辦法將車輛存放在這個地方",
 
-  -- 命令
-  cmdSetGangVehicle = "将当前车辆添加到帮派车库",
-  cmdRemoveGangVehicle = "将帮派车辆归还为玩家车辆",
-  cmdSetJobVehicle = "将当前车辆添加到工作车库",
-  cmdRemoveJobVehicle = "将工作车辆归还为玩家车辆",
-  cmdArgGangName = "帮派名称",
-  cmdArgJobName = "工作名称",
-  cmgArgMinGangRank = "最低帮派等级",
-  cmgArgMinJobRank = "最低工作等级",
-  cmdArgPlayerId = "新车主的玩家ID",
-  cmdImpoundVehicle = "扣押一辆车辆",
-  cmdChangePlate = "更改车辆车牌（仅限管理员）",
-  cmdDeleteVeh = "删除车辆（仅限管理员）",
-  cmdCreatePrivGarage = "为玩家创建私人车库",
+  -- 指令
+  cmdSetGangVehicle = "將當前車輛添加到幫派車庫",
+  cmdRemoveGangVehicle = "將幫派車輛歸還為玩家車輛",
+  cmdSetJobVehicle = "將當前車輛添加到工作車庫",
+  cmdRemoveJobVehicle = "將工作車輛歸還為玩家車輛",
+  cmdArgGangName = "幫派名稱",
+  cmdArgJobName = "工作名稱",
+  cmgArgMinGangRank = "最低幫派階級",
+  cmgArgMinJobRank = "最低工作階級",
+  cmdArgPlayerId = "新車主的玩家ID",
+  cmdImpoundVehicle = "扣押一輛車",
+  cmdChangePlate = "更改車輛車牌（僅限管理員）",
+  cmdDeleteVeh = "刪除車輛（僅限管理員）",
+  cmdCreatePrivGarage = "為玩家創建私人車庫",
 }
