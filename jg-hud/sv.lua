@@ -1,6 +1,6 @@
 Locales = Locales or {}
 
-Locales["en"] = {
+Locales["sv"] = {
   welcomeToJgHud = "👋 Välkommen till JG Hud!",
   welcomeSettingsExplainer = "Du kan justera inställningarna för varje del av HUDen genom att klicka på kategorierna i listan till vänster. I tilägg på att kunna justera färger och inställningar, så har många av de fordonsspecifika kategorierna möjligheten att låta dig välja mellan olika utseenden såsom, analogt, modernt eller minimalt.",
   welcomeLayoutExplainer = "Du kan även ändra på HUDens layout och justera storleken på alla delar av HUDen, inklusive minimapen. Klicka på 'Edit Layout' i övre högra hörnet för att komma igång.",
