@@ -231,4 +231,6 @@ Locales["en"] = {
   dirtyMoneyBalance = "Dirty Money",
   showMinimapOnFoot = "Show minimap on foot",
   showCompassOnFoot = "Show compass on foot",
+  serverTime = "Server time",
+  localTime = "Local time",
 }
