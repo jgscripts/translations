@@ -88,6 +88,7 @@ Locales["pt"] = {
   ukStyleSign = "Sinal Estilo Reino Unido",
   flashSpeedLimit = "Piscar sinal de limite de velocidade ao exceder",
   enableIndicatorSound = "Ativar sons dos indicadores",
+  autoCancelIndicators = "Cancelar indicadores automaticamente",
   enableSeatbeltWarningSound = "Ativar som de aviso do cinto de segurança",
   enableSeatbeltToggleSound = "Ativar som de colocar e tirar o cinto",
   primaryColour = "Cor Principal",

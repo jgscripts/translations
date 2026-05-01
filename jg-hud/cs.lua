@@ -88,6 +88,7 @@ Locales["cs"] = {
   ukStyleSign = "Britský styl značky",
   flashSpeedLimit = "Blikat značkou rychlostního limitu při překročení",
   enableIndicatorSound = "Povolit zvuky směrovek",
+  autoCancelIndicators = "Automaticky vypínat směrovky",
   enableSeatbeltWarningSound = "Povolit zvuk varování bezpečnostního pásu",
   enableSeatbeltToggleSound = "Povolit zvuk zapnutí a odpnutí bezpečnostního pásu",
   primaryColour = "Primární barva",

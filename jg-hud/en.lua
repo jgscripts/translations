@@ -88,6 +88,7 @@ Locales["en"] = {
   ukStyleSign = "UK Style Sign",
   flashSpeedLimit = "Flash speed limit sign when speeding",
   enableIndicatorSound = "Enable indicator sounds",
+  autoCancelIndicators = "Auto-cancel indicators",
   enableSeatbeltWarningSound = "Enable seatbelt warning sound",
   enableSeatbeltToggleSound = "Enable seatbelt plug & unplug sound",
   primaryColour = "Primary Colour",

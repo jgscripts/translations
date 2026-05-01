@@ -88,6 +88,7 @@ Locales["sv"] = {
   ukStyleSign = "UK Stil Skylt",
   flashSpeedLimit = "Blixthastighetsgränsskylt när du överskrider hastigheten",
   enableIndicatorSound = "Aktivera indikatorljud",
+  autoCancelIndicators = "Stäng av blinkers automatiskt",
   enableSeatbeltWarningSound = "Aktivera säkerhetsbältesvarningsljud",
   enableSeatbeltToggleSound = "Aktivera ljud för att sätta på och ta av säkerhetsbältet",
   primaryColour = "Primärfärg",

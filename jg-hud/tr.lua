@@ -88,6 +88,7 @@ Locales["tr"] = {
   ukStyleSign = "UK Tipi Tabela",
   flashSpeedLimit = "Hız sınırı aşıldığında tabelayı yanıp söndür",
   enableIndicatorSound = "Sinyal seslerini etkinleştir",
+  autoCancelIndicators = "Sinyalleri otomatik kapat",
   enableSeatbeltWarningSound = "Emniyet kemeri uyarı sesini etkinleştir",
   enableSeatbeltToggleSound = "Emniyet kemeri takma/çıkarma sesini etkinleştir",
   primaryColour = "Ana Renk",

@@ -88,6 +88,7 @@ Locales["fr"] = {
 	ukStyleSign = "Style britannique",
 	flashSpeedLimit = "Faire clignoter le panneau en cas d’excès de vitesse",
 	enableIndicatorSound = "Activer le son des clignotants",
+	autoCancelIndicators = "Désactiver automatiquement les clignotants",
 	enableSeatbeltWarningSound = "Activer le son d’alerte ceinture",
 	enableSeatbeltToggleSound = "Activer le son de connexion/déconnexion ceinture",
 	primaryColour = "Couleur principale",

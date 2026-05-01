@@ -88,6 +88,7 @@ Locales["zh-tw"] = {
   ukStyleSign = "英式標誌",
   flashSpeedLimit = "超速時閃爍速限",
   enableIndicatorSound = "方向燈聲音",
+  autoCancelIndicators = "自動關閉方向燈",
   enableSeatbeltWarningSound = "安全帶警告聲",
   enableSeatbeltToggleSound = "安全帶插拔聲",
   primaryColour = "主色",
