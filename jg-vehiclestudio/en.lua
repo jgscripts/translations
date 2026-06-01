@@ -4,6 +4,8 @@ Locales["en"] = {
   invalidCoordinates = "Invalid coordinates",
   coordsXyBounds = "X/Y coords must be between -%.0f and %.0f",
   coordsZBounds = "Z coord must be between %.0f and %.0f",
+  coordsLoadFailed = "Unable to load collision at those coordinates",
+  coordsGroundNotFound = "Could not find safe ground at those coordinates",
   failedToSpawnVehicle = "Failed to spawn vehicle",
 
   externalDatasetsRepoNotConfigured = "No external datasets repo configured",
