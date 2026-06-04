@@ -1,0 +1,94 @@
+name: Sync translations to project repos
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'jg-advancedgarages/**'
+      - 'jg-dealerships/**'
+      - 'jg-handling/**'
+      - 'jg-hud/**'
+      - 'jg-mechanic/**'
+      - 'jg-vehiclestudio/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: translations-to-projects
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        project:
+          - jg-advancedgarages
+          - jg-dealerships
+          - jg-handling
+          - jg-hud
+          - jg-mechanic
+          - jg-vehiclestudio
+
+    env:
+      SYNC_TOKEN: ${{ secrets.TRANSLATIONS_SYNC_TOKEN }}
+
+    steps:
+      - name: Check sync token
+        run: |
+          if [ -z "$SYNC_TOKEN" ]; then
+            echo "::error::Set TRANSLATIONS_SYNC_TOKEN with write access to all synced project repos."
+            exit 1
+          fi
+
+      - name: Checkout translations
+        uses: actions/checkout@v4
+        with:
+          path: translations
+          fetch-depth: 0
+
+      - name: Checkout project
+        uses: actions/checkout@v4
+        with:
+          repository: jgscripts/${{ matrix.project }}
+          ref: main
+          path: project
+          token: ${{ secrets.TRANSLATIONS_SYNC_TOKEN }}
+          fetch-depth: 0
+
+      - name: Copy translations into project locales
+        run: |
+          set -euo pipefail
+          rm -rf "project/locales"
+          mkdir -p "project/locales"
+          cp -a "translations/${{ matrix.project }}/." "project/locales/"
+
+      - name: Commit and push project locales
+        working-directory: project
+        run: |
+          set -euo pipefail
+          git config user.name "jg-locales-sync"
+          git config user.email "jg-locales-sync@users.noreply.github.com"
+          git add -A locales
+
+          if git diff --cached --quiet; then
+            echo "No project locale changes to sync."
+            exit 0
+          fi
+
+          git commit -m "Sync locales from translations"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git rebase origin/main
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            sleep 5
+          done
+
+          exit 1
