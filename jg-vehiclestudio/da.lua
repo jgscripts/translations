@@ -1,6 +1,6 @@
 Locales = Locales or {}
 
-Locales["en"] = {
+Locales["da"] = {
   invalidCoordinates = "Ugyldige koordinater",
   coordsXyBounds = "X/Y koordinater skal være mellem -%.0f og %.0f",
   coordsZBounds = "Z-koordinat skal være mellem %.0f og %.0f",
