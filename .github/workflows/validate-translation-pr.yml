@@ -11,7 +11,7 @@ on:
 permissions:
   contents: read
   issues: write
-  pull-requests: read
+  pull-requests: write
 
 jobs:
   validate:
@@ -41,12 +41,35 @@ jobs:
           sudo apt-get install -y lua5.4
 
       - name: Build changed file list
-        run: |
-          set -euo pipefail
-          git -C pr remote add base "https://github.com/${{ github.repository }}.git"
-          git -C pr fetch --no-tags --depth=1 base "${{ github.event.pull_request.base.sha }}"
-          git -C pr diff --name-status -M --diff-filter=ACMRD FETCH_HEAD HEAD > changed-files.txt
-          cat changed-files.txt
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require('fs');
+            const { owner, repo } = context.repo;
+            const pull_number = context.payload.pull_request.number;
+
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number,
+              per_page: 100,
+            });
+
+            const lines = files.map((file) => {
+              if (file.status === 'removed') {
+                return `D\t${file.filename}`;
+              }
+              if (file.status === 'renamed') {
+                return `R100\t${file.previous_filename}\t${file.filename}`;
+              }
+              if (file.status === 'added') {
+                return `A\t${file.filename}`;
+              }
+              return `M\t${file.filename}`;
+            });
+
+            fs.writeFileSync('changed-files.txt', lines.join('\n') + (lines.length ? '\n' : ''));
+            core.info(lines.length ? lines.join('\n') : 'No changed files reported by GitHub.');
 
       - name: Validate translations
         id: validate
@@ -71,7 +94,8 @@ jobs:
 
       - name: Comment with required fixes
         if: always()
-        uses: actions/github-script@v7
+        continue-on-error: true
+        uses: actions/github-script@v8
         env:
           VALIDATION_OUTCOME: ${{ steps.validate.outcome }}
         with:
@@ -82,46 +106,51 @@ jobs:
             const { owner, repo } = context.repo;
             const issue_number = context.issue.number;
 
-            const comments = await github.paginate(github.rest.issues.listComments, {
-              owner,
-              repo,
-              issue_number,
-              per_page: 100,
-            });
-            const existing = comments.find((comment) =>
-              comment.user.type === 'Bot' && comment.body && comment.body.includes(marker)
-            );
+            try {
+              const comments = await github.paginate(github.rest.issues.listComments, {
+                owner,
+                repo,
+                issue_number,
+                per_page: 100,
+              });
+              const existing = comments.find((comment) =>
+                comment.user.type === 'Bot' && comment.body && comment.body.includes(marker)
+              );
 
-            if (outcome === 'failure') {
-              const body = fs.existsSync('validation-comment.md')
-                ? fs.readFileSync('validation-comment.md', 'utf8')
-                : `${marker}\n### Translation PR validation failed\n\nPlease check the workflow logs for details.`;
+              if (outcome === 'failure') {
+                const body = fs.existsSync('validation-comment.md')
+                  ? fs.readFileSync('validation-comment.md', 'utf8')
+                  : `${marker}\n### Translation PR validation failed\n\nPlease check the workflow logs for details.`;
 
-              if (existing) {
+                if (existing) {
+                  await github.rest.issues.updateComment({
+                    owner,
+                    repo,
+                    comment_id: existing.id,
+                    body,
+                  });
+                } else {
+                  await github.rest.issues.createComment({
+                    owner,
+                    repo,
+                    issue_number,
+                    body,
+                  });
+                }
+                return;
+              }
+
+              if (outcome === 'success' && existing) {
                 await github.rest.issues.updateComment({
                   owner,
                   repo,
                   comment_id: existing.id,
-                  body,
-                });
-              } else {
-                await github.rest.issues.createComment({
-                  owner,
-                  repo,
-                  issue_number,
-                  body,
+                  body: `${marker}\n### Translation PR validation passed\n\nThe latest update passes the translation checks.`,
                 });
               }
-              return;
-            }
-
-            if (outcome === 'success' && existing) {
-              await github.rest.issues.updateComment({
-                owner,
-                repo,
-                comment_id: existing.id,
-                body: `${marker}\n### Translation PR validation passed\n\nThe latest update passes the translation checks.`,
-              });
+            } catch (error) {
+              core.warning(`Could not create or update the PR comment: ${error.message}`);
+              core.warning('The validation result is still available in the workflow summary and check status.');
             }
 
       - name: Fail when validation fails

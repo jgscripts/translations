@@ -12,9 +12,9 @@ from dataclasses import dataclass
 from pathlib import Path
 
 
-LANG_CODE_RE = re.compile(r"^[a-z]{2,8}(?:-[a-z0-9]{2,8})*$")
+LANG_CODE_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 HEADER_RE = re.compile(
-    r"""^\s*Locales\s*\[\s*(?P<quote>['"])(?P<code>[a-z]{2,8}(?:-[a-z0-9]{2,8})*)(?P=quote)\s*\]\s*=\s*\{"""
+    r"""^\s*Locales\s*\[\s*(?P<quote>['"])(?P<code>[a-z0-9]+(?:-[a-z0-9]+)*)(?P=quote)\s*\]\s*=\s*\{"""
 )
 INIT_RE = re.compile(r"^\s*Locales\s*=\s*Locales\s+or\s+\{\}")
 COMMENT_RE = re.compile(r"^\s*(?:--.*)?$")
@@ -64,7 +64,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--strict-paths",
         action="store_true",
-        help="Fail changed files outside the project/<lang>.lua locale pattern.",
+        help="Fail changed files outside the project/<locale-key>.lua locale pattern.",
     )
     return parser.parse_args()
 
@@ -169,7 +169,7 @@ def validate_file(repo_root: Path, changed_file: ChangedFile, luac: str | None) 
             relative_path,
             [
                 "Expected a locale file path like `jg-mechanic/de.lua`: one project folder, "
-                "then a lowercase language code filename such as `de.lua`, `pt-br.lua`, or `zh-tw.lua`."
+                "then a lowercase locale key filename such as `de.lua`, `zh-tw.lua`, or `test.lua`."
             ],
         )
 
@@ -282,7 +282,7 @@ def main() -> int:
         strict_path_errors.append(
             ValidationResult(
                 "pull request",
-                ["No locale files were changed. Add or update a file like `jg-mechanic/de.lua` or `jg-mechanic/pt-br.lua`."],
+                ["No locale files were changed. Add or update a file like `jg-mechanic/de.lua` or `jg-mechanic/test.lua`."],
             )
         )
 
