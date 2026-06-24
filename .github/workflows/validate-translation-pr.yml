@@ -1,0 +1,129 @@
+name: Validate translation PR
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: read
+
+jobs:
+  validate:
+    name: Validate locale files
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout trusted validation code
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+
+      - name: Checkout pull request files
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr
+          persist-credentials: false
+
+      - name: Install Lua syntax checker
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y lua5.4
+
+      - name: Build changed file list
+        run: |
+          set -euo pipefail
+          git -C pr remote add base "https://github.com/${{ github.repository }}.git"
+          git -C pr fetch --no-tags --depth=1 base "${{ github.event.pull_request.base.sha }}"
+          git -C pr diff --name-status -M --diff-filter=ACMRD FETCH_HEAD HEAD > changed-files.txt
+          cat changed-files.txt
+
+      - name: Validate translations
+        id: validate
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          python3 base/scripts/validate-translations.py \
+            --repo-root pr \
+            --changed-files changed-files.txt \
+            --report-file validation-report.md \
+            --comment-file validation-comment.md \
+            --luac luac5.4 \
+            --require-luac \
+            --strict-paths
+
+      - name: Publish validation summary
+        if: always()
+        run: |
+          if [ -f validation-report.md ]; then
+            cat validation-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Comment with required fixes
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          VALIDATION_OUTCOME: ${{ steps.validate.outcome }}
+        with:
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- translations-pr-validation -->';
+            const outcome = process.env.VALIDATION_OUTCOME;
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner,
+              repo,
+              issue_number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) =>
+              comment.user.type === 'Bot' && comment.body && comment.body.includes(marker)
+            );
+
+            if (outcome === 'failure') {
+              const body = fs.existsSync('validation-comment.md')
+                ? fs.readFileSync('validation-comment.md', 'utf8')
+                : `${marker}\n### Translation PR validation failed\n\nPlease check the workflow logs for details.`;
+
+              if (existing) {
+                await github.rest.issues.updateComment({
+                  owner,
+                  repo,
+                  comment_id: existing.id,
+                  body,
+                });
+              } else {
+                await github.rest.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number,
+                  body,
+                });
+              }
+              return;
+            }
+
+            if (outcome === 'success' && existing) {
+              await github.rest.issues.updateComment({
+                owner,
+                repo,
+                comment_id: existing.id,
+                body: `${marker}\n### Translation PR validation passed\n\nThe latest update passes the translation checks.`,
+              });
+            }
+
+      - name: Fail when validation fails
+        if: steps.validate.outcome == 'failure'
+        run: exit 1
