@@ -1,6 +1,6 @@
 Locales = Locales or {}
 
-Locales['test'] = {
+Locales['tt'] = {
   -- UI
   vehicle = "Vehicle",
   vehicles = "Vehicles",
