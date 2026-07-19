@@ -1,0 +1,27 @@
+name: Update docs languages pages
+
+# Tells docs.jgscripts.com to regenerate every script's Languages page
+# whenever locale files change on main. Requires the JAMES_PAT secret
+# (same PAT the script repos use for changelog dispatches).
+on:
+  push:
+    branches: [main]
+    paths: ["jg-*/**"]
+  workflow_dispatch:
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Dispatch languages payload to jg-docs
+        env:
+          GH_API_TOKEN: ${{ secrets.JAMES_PAT }}
+        run: node .github/scripts/publish-languages-to-docs.js
