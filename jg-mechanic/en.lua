@@ -343,6 +343,7 @@ Locales["en"] = {
   playerNotOnline = "Player is not online",
   notEnoughMoney = "You don't have enough money",
   invoicePaid = "Invoice paid",
+  commissionPaid = "Commission paid",
   nitrousNotInstalled = "This vehicle does not have nitrous installed",
   noEmptyNitrousBottlesToReplace = "There are no empty nitrous bottles to replace",
   couldNotRemoveNitrousInvItem = "Could not remove 1x nitrous_bottle",

@@ -342,6 +342,7 @@ Locales["hu"] = {
   playerNotOnline = "Játékos nem online",
   notEnoughMoney = "Nincs elég pénzed",
   invoicePaid = "Számla fizetve",
+  commissionPaid = "Jutalék kifizetve",
   nitrousNotInstalled = "Ez a járműnek nincs nitrózis telepítve",
   noEmptyNitrousBottlesToReplace = "Nincs üres nitrózis üveg",
   couldNotRemoveNitrousInvItem = "Nem sikerült eltávolítani 1x nitrous_bottle",

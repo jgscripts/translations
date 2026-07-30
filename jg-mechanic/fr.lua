@@ -343,6 +343,7 @@ Locales["fr"] = {
   playerNotOnline = "Le joueur n'est pas connecté",
   notEnoughMoney = "Vous n'avez pas assez d'argent !",
   invoicePaid = "Facture payé",
+  commissionPaid = "Commission versée",
   nitrousNotInstalled = "Ce véhicule n'a pas de système de NOS installé.",
   noEmptyNitrousBottlesToReplace = "Il n'y aucune bouteille vide de NOS à remplacer",
   couldNotRemoveNitrousInvItem = "Vous ne pouvez pas retirer la bouteille de NOS",

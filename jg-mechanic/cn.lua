@@ -344,6 +344,7 @@ Locales["cn"] = {
   playerNotOnline = "玩家不在线",
   notEnoughMoney = "您的资金不足",
   invoicePaid = "发票已支付",
+  commissionPaid = "佣金已支付",
   nitrousNotInstalled = "该车辆未安装氮气",
   noEmptyNitrousBottlesToReplace = "没有空的氮气瓶可更换",
   couldNotRemoveNitrousInvItem = "无法移除 1x 氮气瓶",

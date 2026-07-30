@@ -343,6 +343,7 @@ Locales["cs"] = {
   playerNotOnline = "Hráč není online",
   notEnoughMoney = "Nemáte dostatek peněz",
   invoicePaid = "Faktura zaplacena",
+  commissionPaid = "Provize vyplacena",
   nitrousNotInstalled = "Toto vozidlo nemá nainstalované nitro",
   noEmptyNitrousBottlesToReplace = "Nejsou žádné prázdné láhve nitro k výměně",
   couldNotRemoveNitrousInvItem = "Nelze odebrat 1x nitrous_bottle",

@@ -343,6 +343,7 @@ Locales["sv"] = {
   playerNotOnline = "Spelaren är inte online",
   notEnoughMoney = "Du har inte tillräckligt med pengar",
   invoicePaid = "Faktura betald",
+  commissionPaid = "Provision utbetald",
   nitrousNotInstalled = "Detta fordon har inte nitro installerat",
   noEmptyNitrousBottlesToReplace = "Det finns inga tomma nitroflaskor att ersätta",
   couldNotRemoveNitrousInvItem = "Kunde inte ta bort 1x nitrous_bottle",

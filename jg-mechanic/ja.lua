@@ -336,6 +336,7 @@ Locales["ja"] = {
   playerNotOnline = "オンラインのプレイヤーがいません",
   notEnoughMoney = "お金が足りません",
   invoicePaid = "請求書が支払われました",
+  commissionPaid = "コミッションが支払われました",
   nitrousNotInstalled = "この車両にはナイトロがインストールされていません",
   noEmptyNitrousBottlesToReplace = "交換用の空のナイトロボトルはありません",
   couldNotRemoveNitrousInvItem = "1xナイトロボトルを削除できませんでした",

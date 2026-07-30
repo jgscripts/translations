@@ -344,6 +344,7 @@ Locales["es"] = {
   playerNotOnline = "El jugador no está conectado",
   notEnoughMoney = "No tienes suficiente dinero",
   invoicePaid = "Factura pagada",
+  commissionPaid = "Comisión pagada",
   nitrousNotInstalled = "Este vehículo no tiene nitro instalado",
   noEmptyNitrousBottlesToReplace = "No hay botellas de óxido nitroso vacías para reemplazar",
   couldNotRemoveNitrousInvItem = "No se pudo eliminar 1x nitrous_bottle",

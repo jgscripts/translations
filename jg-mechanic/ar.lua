@@ -343,6 +343,7 @@ Locales["ar"] = {
   playerNotOnline = "اللاعب غير متصل",
   notEnoughMoney = "ليس لديك ما يكفي من المال",
   invoicePaid = "تم دفع الفاتورة",
+  commissionPaid = "تم دفع العمولة",
   nitrousNotInstalled = "هذه المركبة لا تحتوي على نايتروس مثبت",
   noEmptyNitrousBottlesToReplace = "لا توجد زجاجات نايتروس فارغة للاستبدال",
   couldNotRemoveNitrousInvItem = "تعذر إزالة 1x زجاجة نايتروس",
