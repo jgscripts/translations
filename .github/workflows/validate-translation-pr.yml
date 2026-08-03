@@ -20,31 +20,18 @@ jobs:
 
     steps:
       - name: Checkout trusted validation code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.base.sha }}
           path: base
           persist-credentials: false
 
-      - name: Checkout pull request files
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.sha }}
-          path: pr
-          persist-credentials: false
-
-      - name: Install Lua syntax checker
-        run: |
-          set -euo pipefail
-          sudo apt-get update
-          sudo apt-get install -y lua5.4
-
-      - name: Build changed file list
+      - name: Prepare changed pull request files
         uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
+            const path = require('path');
             const { owner, repo } = context.repo;
             const pull_number = context.payload.pull_request.number;
 
@@ -69,7 +56,31 @@ jobs:
             });
 
             fs.writeFileSync('changed-files.txt', lines.join('\n') + (lines.length ? '\n' : ''));
+            fs.mkdirSync('pr', { recursive: true });
+
+            const localePath = /^jg-[^/]+\/[a-z0-9]+(?:-[a-z0-9]+)*\.lua$/;
+            for (const file of files) {
+              if (file.status === 'removed' || !localePath.test(file.filename)) {
+                continue;
+              }
+
+              const response = await fetch(file.raw_url, { redirect: 'follow' });
+              if (!response.ok) {
+                throw new Error(`Could not download ${file.filename}: HTTP ${response.status}`);
+              }
+
+              const outputPath = path.join('pr', file.filename);
+              fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+              fs.writeFileSync(outputPath, Buffer.from(await response.arrayBuffer()));
+            }
+
             core.info(lines.length ? lines.join('\n') : 'No changed files reported by GitHub.');
+
+      - name: Install Lua syntax checker
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y lua5.4
 
       - name: Validate translations
         id: validate
