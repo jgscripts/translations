@@ -27,16 +27,16 @@ Locales["de"] = {
     xml = "XML:",
     handlingName = "Handling-Name",
     handlingNameNeedsChecking = "Handling-Namen prüfen",
-    handlingNameWarning = "Handling-Namen können nicht zuverlässig erkannt werden. Prüfe oder bearbeite diesen Wert, bevor du das XML kopierst.",
-    missingHandlingName = "Handling-Namen eingeben",
-    deleting = "Lösche...",
-    successfullyLoaded = "erfolgreich geladen",
+    handlingNameWarning = "Der Handling-Name lässt sich nicht zuverlässig erkennen. Prüfe oder bearbeite ihn, bevor du das XML kopierst.",
+    missingHandlingName = "Gib einen Handling-Namen ein.",
+    deleting = "Wird gelöscht...",
+    successfullyLoaded = "Erfolgreich geladen",
     loadProfile = "Profil laden",
     name = "Name",
     vehicleName = "Fahrzeugname",
     editedAt = "Erstellt am",
     editedBy = "Erstellt von",
-    resetHandlingToStock = "Fahrzeug-Handling auf Standard zurücksetzen",
+    resetHandlingToStock = "Fahrzeug-Handling auf den Standard zurücksetzen",
     resetHandling = "Handling zurücksetzen",
     vehicleReset = "Fahrzeug wurde auf Standard zurückgesetzt",
     profileName = "Profilname",
@@ -65,24 +65,24 @@ Locales["de"] = {
 
     -- Long Messages
     applyHandlingIfJGMechanic =
-    "Wenn du JG Mechanic verwendest, überschreiben diese Änderungen das aktuelle Handling. Wartungsschäden werden erst wieder angewendet, nachdem das Fahrzeug zurückgesetzt wurde.",
-    noHandlingChanges = "Es wurden keine Handling-Änderungen vorgenommen!",
-    confirmationDeleteProfile = "Bist du sicher, dass du dieses Profil löschen möchtest?",
+    "Wenn du JG Mechanic nutzt, überschreiben diese Änderungen das aktuelle Handling. Wartungsschäden werden erst nach dem Zurücksetzen des Fahrzeugs wieder berücksichtigt.",
+    noHandlingChanges = "Es wurden keine Änderungen am Handling vorgenommen.",
+    confirmationDeleteProfile = "Möchtest du dieses Profil wirklich löschen?",
     resetHandlingToStockMsg =
-    "Dieses Fahrzeug wurde mit diesem Tool bearbeitet. Du kannst das Fahrzeug auf das ursprüngliche Standard-Handling zurücksetzen (das Handling vor der Bearbeitung durch diesen Editor), indem du unten klickst. Falls das Handling in der Datenbank gespeichert wurde, werden diese Daten gelöscht. Wenn ‚Auf Modell anwenden‘ gewählt wurde, werden alle Fahrzeuge dieses Modells zurückgesetzt.",
+    "Das Handling dieses Fahrzeugs wurde mit diesem Tool bearbeitet. Über die Schaltfläche unten kannst du es auf den ursprünglichen Stand vor der Bearbeitung zurücksetzen. Falls die Änderungen in der Datenbank gespeichert wurden, werden sie dabei gelöscht. Wurde „Auf alle Fahrzeuge dieses Modells anwenden“ gewählt, betrifft das alle Fahrzeuge dieses Modells.",
     bodyRollLeft =
-    "Nach links verschieben, wenn das Fahrzeug sich in Fahrtrichtung zu stark neigt oder zu steif wirkt / kein Body Roll hat",
+    "Schieb den Regler nach links, wenn sich das Fahrzeug in Kurven zu stark neigt oder zu steif wirkt.",
     bodyRollRight =
-    "Nach rechts verschieben, wenn das Fahrzeug in Kurven kippt oder zu viel Body Roll hat / nicht steif genug ist",
-    handlingNotApplied = "Die vorgenommenen Handling-Änderungen wurden noch nicht angewendet.",
-    continueAreYouSure = "Bist du sicher, dass du fortfahren möchtest?",
-    previewRtnToEditor = "Drücke [BACKSPACE], um zum Editor zurückzukehren.",
+    "Schieb den Regler nach rechts, wenn das Fahrzeug in Kurven kippt oder sich zu stark neigt.",
+    handlingNotApplied = "Die Änderungen am Handling wurden noch nicht auf das Fahrzeug angewendet.",
+    continueAreYouSure = "Möchtest du wirklich fortfahren?",
+    previewRtnToEditor = "Drück [BACKSPACE], um zum Editor zurückzukehren.",
     mechanicDataModeExplain =
-    "Dieses Fahrzeug wurde durch JG Mechanic modifiziert. Du kannst das aktuelle Handling bearbeiten (Option 1), ohne Wartungsschäden (Option 2) oder das Basis-Handling ohne jegliche Modifikationen verwenden (Option 3).",
-    currentHandlingExplain = "Teste das aktuelle Handling des Fahrzeugs inklusive Tuning- und Wartungsänderungen.",
+    "JG Mechanic hat das Handling dieses Fahrzeugs verändert. Du kannst das aktuelle Handling bearbeiten (Option 1), Änderungen durch JG Mechanic ignorieren (Option 3) oder nur Wartungsschäden ausblenden (Option 2).",
+    currentHandlingExplain = "Teste das aktuelle Handling des Fahrzeugs mit allen Tuning- und Wartungsänderungen.",
     ignoreServicingExplain =
     "Verwende das aktuelle Handling des Fahrzeugs, jedoch ohne Wartungsschäden (falls vorhanden).",
-    useBaseHandlingExplain = "Verwende das Basis-Handling des Fahrzeugs und ignoriere alle Änderungen durch JG Mechanic.",
+    useBaseHandlingExplain = "Verwende das Basis-Handling des Fahrzeugs ohne Änderungen durch JG Mechanic.",
     applyToModelWarning =
     "Dies wird nicht empfohlen, da es zusätzliche Serverlast verursachen kann. Stattdessen solltest du das Handling exportieren und die handling.meta-Datei direkt anpassen.",
 
@@ -90,7 +90,7 @@ Locales["de"] = {
     allCategories = "Alle Kategorien",
     aero = "Aerodynamik",
     transmission = "Getriebe",
-    traction = "Rad-Traktion",
+    traction = "Reifengrip",
     suspension = "Federung",
     damage = "Schaden",
     chassis = "Chassis",
@@ -101,9 +101,9 @@ Locales["de"] = {
     other = "Sonstiges",
     acceleration = "Beschleunigung",
     topSpeed = "Höchstgeschwindigkeit (%s)",
-    transmissionGearbox = "Getriebe (Gangschaltung)",
-    drivetrain = "Antrieb (RWD, AWD, etc.)",
-    downforce = "Flügel (Abtrieb)",
+    transmissionGearbox = "Getriebe",
+    drivetrain = "Antrieb (Heck-, Allradantrieb usw.)",
+    downforce = "Abtrieb",
     bodyRoll = "Karosserieneigung",
 
     -- Timing Tool
@@ -114,19 +114,19 @@ Locales["de"] = {
     loading = "Lädt",
 
     -- Notifications
-    noSavedHandlings = "Keine Handling-Konfigurationen gespeichert",
-    noResultsFound = "Keine Ergebnisse gefunden",
+    noSavedHandlings = "Es sind keine Handling-Konfigurationen gespeichert.",
+    noResultsFound = "Keine Ergebnisse gefunden.",
     noHandlingChangesMade = "Es wurden keine Handling-Änderungen vorgenommen",
     handlingSaved = "Handling gespeichert",
     notInVehicle = "Du befindest dich in keinem Fahrzeug",
-    notCompatibleWithHandlingEditor = "Dieses Fahrzeug ist nicht mit dem Handling-Editor kompatibel",
+    notCompatibleWithHandlingEditor = "Dieses Fahrzeug wird vom Handling-Editor nicht unterstützt.",
     handlingApplied = "Handling-Profil erfolgreich angewendet",
-    requiresAdmin = "Du musst Admin sein, um dies zu verwenden",
-    noPermission = "Du hast keine Berechtigung hierfür",
+    requiresAdmin = "Du brauchst Adminrechte, um das zu nutzen.",
+    noPermission = "Dafür hast du keine Berechtigung.",
     couldNotCreateProfile = "Neues Profil konnte nicht erstellt werden",
 
     -- Search/tables
-    noItemsMatchSearch = "Keine Einträge entsprechen deiner Suche.",
-    noItemsMatchFilters = "Keine Einträge entsprechen deinen Filtern.",
+    noItemsMatchSearch = "Keine Einträge passen zu deiner Suche.",
+    noItemsMatchFilters = "Keine Einträge passen zu deinen Filtern.",
     items = "Einträge",
 }
