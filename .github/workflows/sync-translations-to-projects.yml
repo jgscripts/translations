@@ -11,6 +11,7 @@ on:
       - 'jg-hud/**'
       - 'jg-mechanic/**'
       - 'jg-vehiclestudio/**'
+      - 'jg-vehiclekeys/**'
   workflow_dispatch:
 
 permissions:
@@ -33,6 +34,7 @@ jobs:
           - jg-hud
           - jg-mechanic
           - jg-vehiclestudio
+          - jg-vehiclekeys
 
     env:
       SYNC_TOKEN: ${{ secrets.JAMES_PAT }}
